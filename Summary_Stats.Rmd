@@ -1,0 +1,78 @@
+---
+title: "Summary_Stats"
+author: "Alina Schneider"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Library
+
+```{r}
+
+library(tidyverse)
+library(psych)
+
+```
+
+# Glimpse
+
+```{r}
+
+glimpse(df)
+
+glimpse(df_2)
+
+```
+
+# Change Column Name
+
+```{r}
+
+df <- df %>% 
+  rename(
+   "col" =  '446'
+  )
+
+df_2 <- df_2 %>% 
+  rename(
+   "col" =  '510'
+  )
+
+```
+
+# Summary 
+
+```{r}
+
+# TODO: calculate summary stats for IBI series
+
+summary(df)
+
+summary(df_2)
+
+```
+
+# Further summaries
+
+```{r}
+
+describe(df)
+
+describe(df_2)
+
+```
+
+# Histogramm
+
+```{r}
+
+hist(df$col)
+
+hist(df_2$col)
+
+```
+
