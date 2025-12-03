@@ -1,4 +1,4 @@
-# install packages if this is important
+# install packages if they are not yet installed
 library(tidyverse)
 library(readxl)
 
